@@ -11,7 +11,7 @@ see: https://nacos.io/zh-cn/docs/open-API.html
 ## Install
 
 ```bash
-composer require shishi/nacos-sdk-php
+composer require shishi/nacos-php
 ```
 
 ## Getting Started
@@ -26,6 +26,10 @@ $group = 'test-group';
 $value = $client->getConfig($dataId, $group);
 ```
 
+## 注意事项 
+  1.命名空间和保持ID相同，避免空间ID参数错误
+  2.本案例使用有问题，大家及时提出修改更正
+
 ## API
 
 ### Request Options
@@ -35,7 +39,7 @@ $value = $client->getConfig($dataId, $group);
 - setTimeout
   - int $timeout
 
-### Config API
+### Config API 
 
 - getConfig
   - string $dataId
@@ -51,7 +55,7 @@ $value = $client->getConfig($dataId, $group);
   - array $configs
   - int $timeout = 30
 
-### Naming API
+### Naming API 
 
 - createInstance
   - ServiceInstance $instance
