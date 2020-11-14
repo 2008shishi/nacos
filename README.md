@@ -1,4 +1,4 @@
-# nacos-sdk-php
+# nacos-php
 
 A PHP implementation of Nacos OpenAPI.
 
