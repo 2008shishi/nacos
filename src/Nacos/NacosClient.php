@@ -354,6 +354,9 @@ class NacosClient
             'beat' => json_encode($beat),
         ];
 
+        if ($this->namespace) {
+            $formParams['namespaceId'] = $this->namespace;
+        }
         $resp = $this->request('PUT', '/nacos/v1/ns/instance/beat', ['form_params' => $formParams]);
         $array = json_decode($resp->getBody(), JSON_OBJECT_AS_ARRAY);
 

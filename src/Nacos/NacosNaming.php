@@ -17,9 +17,15 @@ class NacosNaming
         $this->client = $client;
     }
 
-    public function selectOneHealthyInstance($serviceName)
+    /**
+     * @param $serviceName
+     * @param null $namespaceId
+     * @return Models\ServiceInstance
+     * @throws \Exception
+     */
+    public function selectOneHealthyInstance($serviceName,$namespaceId = null)
     {
-        $list = $this->client->getInstanceList($serviceName);
+        $list = $this->client->getInstanceList($serviceName,$namespaceId);
 
         if (count($list->hosts) === 0) {
             throw new NacosNamingNoAliveInstance("$serviceName no alive instnace");
