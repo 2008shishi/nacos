@@ -1,5 +1,5 @@
 {
-    "name": "shishi/nacos-sdk-php",
+    "name": "shishi/nacos-php",
     "version": "1.0.1",
     "description": "Nacos PHP Client",
     "type": "library",
