@@ -274,20 +274,18 @@ class NacosClient
      * @param string $serviceName      服务名
      * @param string|null $namespaceId 命名空间ID
      * @param string[] $clusters       集群名称
-     * @param bool $healthyOnly        是否只返回健康实例
      * @return ServiceInstanceList
      */
     public function getInstanceList(
         string $serviceName,
         string $namespaceId = null,
-        array $clusters = [],
-        bool $healthyOnly = false
+        array $clusters = []
     ) {
         $query = array_filter([
             'serviceName' => $serviceName,
             'namespaceId' => $namespaceId,
             'clusters' => join(',', $clusters),
-            'healthyOnly' => $healthyOnly,
+            'healthyOnly' => 'true',//返回健康实例 true
         ]);
 
         $resp = $this->request('GET', '/nacos/v1/ns/instance/list', [
