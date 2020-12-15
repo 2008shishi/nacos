@@ -4,6 +4,7 @@
     "description": "Nacos PHP Client",
     "type": "library",
     "license": "MIT",
+    "minimum-stability": "stable",
     "authors": [
         {
             "name": "shishi",
