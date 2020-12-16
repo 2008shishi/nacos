@@ -1,10 +1,9 @@
 {
     "name": "shishi/nacos-php",
-    "version": "2.1",
     "description": "Nacos PHP Client",
     "type": "library",
     "license": "MIT",
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "shishi",
